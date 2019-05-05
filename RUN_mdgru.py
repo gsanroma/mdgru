@@ -56,7 +56,8 @@ def run_mdgru(args=None):
 
     # Set the necessary classes
     # dc = GridDataCollection
-    tdc = GridDataCollection if pre_args.nonthreaded else ThreadedGridDataCollection
+    # tdc = GridDataCollection if pre_args.nonthreaded else ThreadedGridDataCollection
+    tdc = ThreadedGridDataCollection
 
     define_arguments(modelcls, parser.add_argument_group('Model Parameters'))
     define_arguments(evalcls, parser.add_argument_group('Evaluation Parameters'))
